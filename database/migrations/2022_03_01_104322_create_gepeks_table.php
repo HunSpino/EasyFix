@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('gepeks', function (Blueprint $table) {
             $table->id();
+            $table->string('epulet');
+            $table->integer('emelet');
+            $table->integer('terem');
+            $table->string('gep');
             $table->timestamps();
         });
     }

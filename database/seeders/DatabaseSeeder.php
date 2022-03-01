@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(10)->create();
         User::factory(2)->create(['role' => 'Admin']);
-
+        $this->call(GepekSeeder::class);
     }
 }
