@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Allapot;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,5 +19,10 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         User::factory(2)->create(['role' => 'Admin']);
         $this->call(GepekSeeder::class);
+        Allapot::factory()->createMany([
+            ['id' => 1, 'allapot' => 'Kész'],
+            ['id' => 2, 'allapot' => 'Folyamatban van'],
+            ['id' => 3, 'allapot' => 'Nincs megkezdve']
+        ]);
     }
 }
