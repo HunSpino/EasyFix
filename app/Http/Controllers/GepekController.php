@@ -14,7 +14,8 @@ class GepekController extends Controller
      */
     public function index()
     {
-        //
+        $gepeks = Gepek::orderBy('id')->get();
+        return view('gepeks.index',['gepeks' =>$gepeks]);
     }
 
     /**

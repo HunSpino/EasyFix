@@ -14,7 +14,8 @@ class HibajelentController extends Controller
      */
     public function index()
     {
-        //
+        $hibajelents = Hibajelent::orderBy('id')->get();
+        return view('hibajelents.index',['hibajelents'=>$hibajelents]);
     }
 
     /**
