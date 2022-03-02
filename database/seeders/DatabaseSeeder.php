@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
             ['id' => 2, 'allapot' => 'Folyamatban van'],
             ['id' => 3, 'allapot' => 'Nincs megkezdve']
         ]);
+        $this->call(HibajelentSeeder::class);
     }
 }

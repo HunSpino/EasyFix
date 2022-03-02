@@ -17,7 +17,12 @@ class HibajelentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'datum' =>$this->faker->dateTime(),
+            'hiba' => $this->faker->text(),
+            'user_id' => $this->faker->numberBetween(1,10),
+            'gepek_id' => $this->faker->numberBetween(1,15),
+            'allapot_id' => $this->faker->numberBetween(1,3)
         ];
     }
 }
+//
