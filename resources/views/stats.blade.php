@@ -7,9 +7,9 @@
 <p>Ennyi személlyel dolgozik a cégünk: {{ $userCount }}</p>
 <p>Ennyi géppel dolgozik cégünk: {{ $gepekCount }}</p>
 <p>
-    <a href="{{ route('gepeks.index') }}">Gépek amink vannak</a>
+    <a href="{{ route('gepeks.index') }}"><button type="button">Gépek amink vannak</button></a>
 </p>
 <p>
-    <a href="{{ route('hibajelents.index') }}">Hibabejelentések</a>
+    <a href="{{ route('hibajelents.index') }}"><button type="button">Hibabejelentések</button></a>
 </p>
 @endsection

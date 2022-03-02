@@ -25,7 +25,7 @@ class GepekController extends Controller
      */
     public function create()
     {
-        //
+        return view('gepeks.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class GepekController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $adatok = $request->only(['epulet','emelet','terem','gep']);
+        $gepek = new Gepek();
+        $gepek->fill($adatok);
+        $gepek->save();
+        return redirect()->route('gepeks.index');
     }
 
     /**
@@ -47,7 +51,7 @@ class GepekController extends Controller
      */
     public function show(Gepek $gepek)
     {
-        //
+        return view('gepeks.show',['gepek' =>$gepek]);
     }
 
     /**
@@ -58,7 +62,7 @@ class GepekController extends Controller
      */
     public function edit(Gepek $gepek)
     {
-        //
+        return view('gepeks.edit',['gepek' =>$gepek]);
     }
 
     /**
@@ -70,7 +74,10 @@ class GepekController extends Controller
      */
     public function update(Request $request, Gepek $gepek)
     {
-        //
+        $adatok = $request->only(['epulet','emelet','terem','gep']);
+        $gepek->fill($adatok);
+        $gepek->save();
+        return redirect()->route('gepeks.show', $gepek->id);
     }
 
     /**
@@ -81,6 +88,7 @@ class GepekController extends Controller
      */
     public function destroy(Gepek $gepek)
     {
-        //
+        $gepek->delete();
+        return redirect()->route('gepeks.index');
     }
 }
