@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GepekController;
+use App\Http\Controllers\HibajelentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ HomeController::class, 'index' ])->name('home');
+Route::resource('/gepeks',GepekController::class);
+Route::resource('/hibajelents',HibajelentController::class);
