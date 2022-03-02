@@ -10,6 +10,13 @@
         <th>A jelentés dátuma</th>
         <th>Javítási állapota</th>
         @foreach ($hibajelents as $hibajelent)
+        <tr>
+            <td>{{ $hibajelent->users->name }}</td>
+            <td>{{ $hibajelent->gepeks->gep }}</td>
+            <td>{{ $hibajelent->hiba }}</td>
+            <td>{{ $hibajelent->datum }}</td>
+            <td>{{ $hibajelent->allapots->allapot }}</td>
+        </tr>
 
         @endforeach
     </tr>
