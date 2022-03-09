@@ -16,7 +16,7 @@
             </td>
             <td>{{ $hibajelent->gepek()->first()->gep }}</td>
             <td>{{ $hibajelent->hiba }}</td>
-            <td>{{ $hibajelent->datum }}</td>
+            <td>{{ $hibajelent->created_at }}</td>
             <td>{{ $hibajelent->allapot()->first()->allapot }}</td>
             <td>
                     @include('delete-hibajelentes-button', ['hibajelentId'=>$hibajelent->id])

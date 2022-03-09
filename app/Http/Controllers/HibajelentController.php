@@ -39,7 +39,6 @@ class HibajelentController extends Controller
         $adatok = $request->only(['hiba','user_id','gepek_id']);
         $hibajelent = new Hibajelent();
         $hibajelent->fill($adatok);
-        $hibajelent->datum;
         $hibajelent->allapot_id=3;
         $hibajelent->save();
         return redirect()->route('hibajelents.index');

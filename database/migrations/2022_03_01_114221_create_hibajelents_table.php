@@ -20,7 +20,6 @@ return new class extends Migration
     {
         Schema::create('hibajelents', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('datum');
             $table->string('hiba');
             $table->timestamps();
         });

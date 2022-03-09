@@ -18,7 +18,7 @@ class Hibajelent extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
-    protected $fillable = ['datum','hiba','user_id','gepek_id','allapot_id'];
+    protected $fillable = ['hiba','user_id','gepek_id','allapot_id'];
 
-    protected $visible = ['datum','hiba','user_id','gepek_id','allapot_id'];
+    protected $visible = ['hiba','user_id','gepek_id','allapot_id'];
 }
