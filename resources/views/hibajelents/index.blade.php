@@ -26,5 +26,5 @@
         @endforeach
     </tr>
 </table>
-<p><a href="{{ route('hibajelents.create') }}"><button type="button">Új gép adatainak megadása</button></a></p>
+<p><a href="{{ route('hibajelents.create') }}"><button type="button">Új hibajelentés küldése</button></a></p>
 @endsection
