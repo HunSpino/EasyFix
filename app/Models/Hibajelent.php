@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Hibajelent extends Model
 {
     use HasFactory;
+
+    public function gepek(){
+        return $this->belongsTo(Gepek::class);
+    }
+    public function allapot(){
+        return $this->belongsTo(Allapot::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    protected $fillable = ['datum','hiba','user_id','gepek_id','allapot_id'];
+
+    protected $visible = ['datum','hiba','user_id','gepek_id','allapot_id'];
 }

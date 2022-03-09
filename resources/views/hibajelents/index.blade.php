@@ -11,11 +11,11 @@
         <th>Javítási állapota</th>
         @foreach ($hibajelents as $hibajelent)
         <tr>
-            <td>{{ $hibajelent->users->name }}</td>
-            <td>{{ $hibajelent->gepeks->gep }}</td>
+            <td>{{ $hibajelent->user()->first()->name }}</td>
+            <td>{{ $hibajelent->gepek()->first()->gep }}</td>
             <td>{{ $hibajelent->hiba }}</td>
             <td>{{ $hibajelent->datum }}</td>
-            <td>{{ $hibajelent->allapots->allapot }}</td>
+            <td>{{ $hibajelent->allapot()->first()->allapot }}</td>
         </tr>
 
         @endforeach

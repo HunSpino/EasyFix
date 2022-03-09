@@ -39,7 +39,7 @@ class HibajelentController extends Controller
         $adatok = $request->only(['hiba','user_id','gepek_id']);
         $hibajelent = new Hibajelent();
         $hibajelent->fill($adatok);
-        //$hibajelent->datum
+        $hibajelent->datum;
         $hibajelent->allapot_id=3;
         $hibajelent->save();
         return redirect()->route('hibajelents.index');
@@ -76,7 +76,7 @@ class HibajelentController extends Controller
      */
     public function update(Request $request, Hibajelent $hibajelent)
     {
-        $adatok = $request->only(['datum','hiba','user_id','gepek_id','allapot_id']);
+        $adatok = $request->only(['hiba','user_id','gepek_id','allapot_id']);
         $hibajelent->fill($adatok);
         $hibajelent->save();
         return redirect()->route('hibajelents.show',$hibajelent->id);
