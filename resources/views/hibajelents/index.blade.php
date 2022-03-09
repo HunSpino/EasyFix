@@ -11,11 +11,16 @@
         <th>Javítási állapota</th>
         @foreach ($hibajelents as $hibajelent)
         <tr>
-            <td>{{ $hibajelent->user()->first()->name }}</td>
+            <td>
+                <a href="{{ route('hibajelents.show', [$hibajelent->id]) }}">{{ $hibajelent->user()->first()->name }}</a>
+            </td>
             <td>{{ $hibajelent->gepek()->first()->gep }}</td>
             <td>{{ $hibajelent->hiba }}</td>
             <td>{{ $hibajelent->datum }}</td>
             <td>{{ $hibajelent->allapot()->first()->allapot }}</td>
+            <td>
+                    @include('delete-hibajelentes-button', ['hibajelentId'=>$hibajelent->id])
+            </td>
         </tr>
 
         @endforeach
