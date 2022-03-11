@@ -21,9 +21,9 @@
             @enderror
         </div>
         <div>
-            A hibát tartalmazó gép terem "ID"-ja: <br>
-            <input type="number" name="terem_id" value="{{ old('terem_id') }}">
-            @error('terem_id')
+            A hibát tartalmazó gép "ID"-ja: <br>
+            <input type="number" name="gepek_id" value="{{ old('gepek_id') }}">
+            @error('gepek_id')
                 <p>{{ $message }}</p>
             @enderror
         </div>
