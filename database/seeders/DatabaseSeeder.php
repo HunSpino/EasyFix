@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
         User::factory(2)->create(['role' => 'Admin']);
         $this->call(GepekSeeder::class);
         Allapot::factory()->createMany([
-            ['id' => 1, 'allapot' => 'Kész'],
+            ['id' => 1, 'allapot' => 'Nincs megkezdve'],
             ['id' => 2, 'allapot' => 'Folyamatban van'],
-            ['id' => 3, 'allapot' => 'Nincs megkezdve']
+            ['id' => 3, 'allapot' => 'Kész']
         ]);
         $this->call(HibajelentSeeder::class);
     }
