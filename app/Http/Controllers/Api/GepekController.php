@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\GepekRequest;
 use App\Models\Gepek;
 use Illuminate\Http\Request;
 
@@ -35,12 +36,12 @@ class GepekController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GepekRequest $request)
     {
-        $p = new Gepek();
-        $p->fill($request->all());
-        $p->save();
-        return response()->json($p, 201);
+        $gepek = new Gepek();
+        $gepek->fill($request->all());
+        $gepek->save();
+        return response()->json($gepek, 201);
     }
 
     /**
@@ -49,10 +50,9 @@ class GepekController extends Controller
      * @param  \App\Models\Gepek  $gepek
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function show(Gepek $gepek)
     {
-        $p = Gepek::findOrFail($id);
-        return response()->json($p);
+        return response()->json($gepek);
     }
 
     /**
@@ -73,9 +73,11 @@ class GepekController extends Controller
      * @param  \App\Models\Gepek  $gepek
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, int $id)
+    public function update(GepekRequest $request, Gepek $gepek)
     {
-        //
+        $gepek->fill($request->all());
+        $gepek->save();
+        return response()->json($gepek,200);
     }
 
     /**
@@ -84,8 +86,9 @@ class GepekController extends Controller
      * @param  \App\Models\Gepek  $gepek
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gepek $gepek)
+    public function destroy(int $id)
     {
-        //
+        Gepek::destroy($id);
+        return response()->noContent();
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\HibajelentRequest;
 use App\Models\Hibajelent;
 use Illuminate\Http\Request;
 
@@ -35,9 +36,12 @@ class HibajelentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HibajelentRequest $request)
     {
-        //
+        $hibajelent = new Hibajelent();
+        $hibajelent->fill($request->all());
+        $hibajelent->save();
+        return response()->json($hibajelent, 201);
     }
 
     /**
@@ -48,7 +52,7 @@ class HibajelentController extends Controller
      */
     public function show(Hibajelent $hibajelent)
     {
-        //
+        return response()->json($hibajelent);
     }
 
     /**
@@ -57,7 +61,7 @@ class HibajelentController extends Controller
      * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hibajelent $hibajelent)
+    public function edit(int $id)
     {
         //
     }
@@ -69,9 +73,11 @@ class HibajelentController extends Controller
      * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hibajelent $hibajelent)
+    public function update(HibajelentRequest $request, Hibajelent $hibajelent)
     {
-        //
+        $hibajelent->fill($request->all());
+        $hibajelent->save();
+        return response()->json($hibajelent, 200);
     }
 
     /**
@@ -80,8 +86,9 @@ class HibajelentController extends Controller
      * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hibajelent $hibajelent)
+    public function destroy(int $id)
     {
-        //
+        Hibajelent::destroy($id);
+        return response()->noContent();
     }
 }
