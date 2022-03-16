@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Gepek;
+use App\Models\Hibajelent;
 use Illuminate\Http\Request;
 
-class GepekController extends Controller
+class HibajelentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class GepekController extends Controller
      */
     public function index()
     {
-        $gepeks = Gepek::all();
-        return response()->json($gepeks);
+        $hibajelents = Hibajelent::all();
+        return response()->json($hibajelents);
     }
 
     /**
@@ -37,31 +37,27 @@ class GepekController extends Controller
      */
     public function store(Request $request)
     {
-        $p = new Gepek();
-        $p->fill($request->all());
-        $p->save();
-        return response()->json($p, 201);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Gepek  $gepek
+     * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function show(Hibajelent $hibajelent)
     {
-        $p = Gepek::findOrFail($id);
-        return response()->json($p);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Gepek  $gepek
+     * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Hibajelent $hibajelent)
     {
         //
     }
@@ -70,10 +66,10 @@ class GepekController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Gepek  $gepek
+     * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, Hibajelent $hibajelent)
     {
         //
     }
@@ -81,10 +77,10 @@ class GepekController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Gepek  $gepek
+     * @param  \App\Models\Hibajelent  $hibajelent
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gepek $gepek)
+    public function destroy(Hibajelent $hibajelent)
     {
         //
     }
