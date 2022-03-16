@@ -20,15 +20,6 @@ class GepekController extends Controller
         return response()->json($gepeks);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -53,17 +44,6 @@ class GepekController extends Controller
     public function show(Gepek $gepek)
     {
         return response()->json($gepek);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Gepek  $gepek
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(int $id)
-    {
-        //
     }
 
     /**

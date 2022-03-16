@@ -20,15 +20,7 @@ class HibajelentController extends Controller
         return response()->json($hibajelents);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -53,17 +45,6 @@ class HibajelentController extends Controller
     public function show(Hibajelent $hibajelent)
     {
         return response()->json($hibajelent);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Hibajelent  $hibajelent
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(int $id)
-    {
-        //
     }
 
     /**
