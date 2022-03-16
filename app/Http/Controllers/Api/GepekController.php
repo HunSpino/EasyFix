@@ -61,7 +61,7 @@ class GepekController extends Controller
      * @param  \App\Models\Gepek  $gepek
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
         //
     }

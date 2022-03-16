@@ -24,7 +24,7 @@ class GepekRequest extends FormRequest
     public function rules()
     {
         return [
-            'epulet' => 'required|string|',
+            'epulet' => 'required|string',
             'emelet' => 'required|numeric|min:0|max:3',
             'terem' => 'required|numeric|min:1|max:23',
             'gep' => 'required|numeric|min:1|max:50'
