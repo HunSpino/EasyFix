@@ -13,7 +13,17 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('EasyFix') }}
+                        {{ __('Főoldal') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('gepeks.index')" :active="request()->routeIs('gepeks.index')">
+                        {{ __('Gépeink') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('hibajelents.index')" :active="request()->routeIs('hibajelents.index')">
+                        {{ __('Hibajelnetések') }}
                     </x-nav-link>
                 </div>
             </div>

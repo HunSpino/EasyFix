@@ -19,13 +19,20 @@
                 <td>
                     <a href="{{ route('gepeks.show', [$gepek->id]) }}">{{ $gepek->gep }}</a>
                 </td>
+                @auth
+                @if (auth()->user()->role === 'Admin')
                 <td>
                     @include('delete-gepek-button', ['gepekId'=>$gepek->id])
                 </td>
+                @endif
+                @endauth
             </tr>
         @endforeach
     </tr>
 </table>
+@auth
+@if (auth()->user()->role === 'Admin')
 <p><a href="{{ route('gepeks.create') }}"><button type="button">Új gép adatainak megadása</button></a></p>
-
+@endif
+@endauth
 </x-app-layout>

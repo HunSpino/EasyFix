@@ -21,9 +21,13 @@
             <td>{{ $hibajelent->hiba }}</td>
             <td>{{ $hibajelent->created_at }}</td>
             <td>{{ $hibajelent->allapot()->first()->allapot }}</td>
+            @auth
+                @if (auth()->user()->role === 'Admin')
             <td>
                     @include('delete-hibajelentes-button', ['hibajelentId'=>$hibajelent->id])
             </td>
+                @endif
+            @endauth
         </tr>
 
         @endforeach

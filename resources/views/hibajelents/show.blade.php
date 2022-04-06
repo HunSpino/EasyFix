@@ -10,6 +10,10 @@
 <p>A gépe: {{ $hibajelent->gepek()->first()->gep }}</p>
 <p>Beküldési dátum: {{ $hibajelent->created_at }}</p>
 <h3>Állapot: {{ $hibajelent->allapot()->first()->allapot }}</h3>
-<p> @include('delete-hibajelentes-button', ['hibajelentId'=>$hibajelent->id])</p>
-<p><a href="{{ route('hibajelents.edit', [$hibajelent->id]) }}"><button type="button">Szerkesztés</button></a></p>
+@auth
+    @if (auth()->user()->role === 'Admin')
+        <p> @include('delete-hibajelentes-button', ['hibajelentId'=>$hibajelent->id])</p>
+        <p><a href="{{ route('hibajelents.edit', [$hibajelent->id]) }}"><button type="button">Szerkesztés</button></a></p>
+    @endif
+@endauth
 </x-app-layout>

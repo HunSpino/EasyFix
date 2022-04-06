@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Már 10. 11:59
+-- Létrehozás ideje: 2022. Ápr 06. 13:38
 -- Kiszolgáló verziója: 10.4.22-MariaDB
 -- PHP verzió: 8.0.13
 
@@ -39,9 +39,9 @@ CREATE TABLE `allapots` (
 --
 
 INSERT INTO `allapots` (`id`, `allapot`, `created_at`, `updated_at`) VALUES
-(1, 'Nincs megkezdve', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(2, 'Folyamatban van', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(3, 'Kész', '2022-03-09 12:06:13', '2022-03-09 12:06:13');
+(1, 'Nincs megkezdve', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(2, 'Folyamatban van', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(3, 'Kész', '2022-04-05 08:17:02', '2022-04-05 08:17:02');
 
 -- --------------------------------------------------------
 
@@ -80,21 +80,21 @@ CREATE TABLE `gepeks` (
 --
 
 INSERT INTO `gepeks` (`id`, `epulet`, `emelet`, `terem`, `gep`, `created_at`, `updated_at`) VALUES
-(1, 'A', 3, 2, '42', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(2, 'B', 0, 21, '37', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(3, 'B', 1, 1, '16', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(4, 'A', 3, 4, '24', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(5, 'A', 2, 9, '22', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(6, 'B', 2, 6, '6', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(7, 'B', 3, 20, '50', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(8, 'B', 2, 14, '35', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(9, 'A', 2, 8, '28', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(10, 'B', 3, 13, '21', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(11, 'A', 1, 19, '22', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(12, 'A', 3, 21, '38', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(13, 'B', 3, 17, '8', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(14, 'B', 1, 23, '1', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(15, 'B', 0, 16, '3', '2022-03-09 12:06:13', '2022-03-09 12:06:13');
+(1, 'A', 3, 21, '13', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(2, 'B', 1, 9, '26', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(3, 'A', 0, 5, '33', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(4, 'A', 3, 9, '47', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(5, 'B', 2, 14, '25', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(6, 'A', 3, 4, '49', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(7, 'B', 2, 21, '26', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(8, 'B', 0, 12, '3', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(9, 'A', 0, 9, '16', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(10, 'A', 1, 17, '28', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(11, 'B', 3, 1, '10', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(12, 'A', 1, 1, '50', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(13, 'A', 2, 17, '5', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(14, 'B', 2, 14, '42', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(15, 'A', 2, 7, '49', '2022-04-05 08:17:02', '2022-04-05 08:17:02');
 
 -- --------------------------------------------------------
 
@@ -117,16 +117,17 @@ CREATE TABLE `hibajelents` (
 --
 
 INSERT INTO `hibajelents` (`id`, `hiba`, `created_at`, `updated_at`, `user_id`, `gepek_id`, `allapot_id`) VALUES
-(1, 'Placeat quia dicta aut beatae accusantium inventore culpa dolor. Optio provident facere aut possimus. Magnam quas consectetur officia exercitationem. Eum repellat qui incidunt consequatur ut ut.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 8, 15, 1),
-(2, 'Suscipit ut reprehenderit doloremque itaque. Nam iure in est error tempora sit omnis aliquid. Dolores dolores aliquam est deserunt dolor rerum quis. Maxime officia et ex temporibus.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 10, 4, 1),
-(3, 'A nobis et veniam voluptate et. A debitis voluptatem repellendus eum occaecati et. Itaque voluptate voluptatem debitis aut quia aut sit reiciendis.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 4, 2, 3),
-(4, 'Voluptas odio aliquam qui vitae explicabo. Hic eveniet nostrum praesentium est. Id fugit pariatur adipisci optio saepe velit itaque.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 6, 15, 2),
-(5, 'Facere sed fugiat nam. Magnam consequuntur ut impedit voluptatem architecto iste enim. Aspernatur doloremque recusandae rerum beatae est dolorem rem nisi.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 9, 14, 2),
-(6, 'Ipsa molestias minus vel consequatur odio enim. Voluptate voluptas ipsam neque magni consequuntur laudantium autem. Minus rerum nostrum ad deleniti repellendus.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 6, 2, 2),
-(7, 'Qui placeat voluptas iusto aut quis ab ab ad. Ut dolorum dignissimos et. Neque sed illum molestias aut cupiditate odio officia. Quis cumque voluptatum amet.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 10, 4, 1),
-(8, 'Accusantium maxime quaerat minus sit soluta illum. Id repellat ea cum aut minima ullam libero. Voluptatem est enim ab vel. Placeat non laboriosam consequatur ipsum.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 10, 15, 3),
-(9, 'Repudiandae sit quia facere libero laborum recusandae ut vitae. Et et debitis veritatis enim. Aut eveniet est rerum aut.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 1, 9, 3),
-(10, 'At sed aut consequatur debitis quia nam. Debitis cupiditate velit est tempore molestiae. Est laboriosam aspernatur libero amet iste.', '2022-03-09 12:06:13', '2022-03-09 12:06:13', 4, 6, 1);
+(1, 'Temporibus cumque voluptatem et placeat. Aut ea consequatur aut nihil voluptatem aut. Velit et eius aperiam soluta. Natus cum occaecati aut odio.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 5, 11, 2),
+(2, 'Perspiciatis animi cumque rerum sunt. Perferendis impedit molestiae cum iste asperiores. Et dolore aut sed ut quam et facere. Mollitia voluptatum quam eveniet illo.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 1, 7, 3),
+(3, 'Nemo sed non aut blanditiis. Ducimus sunt et perferendis in dolore debitis. Commodi explicabo et molestias qui in tenetur.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 9, 15, 1),
+(4, 'Cumque aut consectetur numquam et omnis. Cupiditate possimus ducimus occaecati dolore. Commodi ad placeat esse voluptas eos. Eum deleniti repellat voluptas nihil qui non.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 10, 2, 1),
+(5, 'Molestiae et sed rerum et voluptatem fugit. Voluptate omnis occaecati rerum. Tempora voluptatem saepe perferendis voluptas. Ex praesentium quidem eum debitis qui numquam.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 9, 11, 3),
+(6, 'Cum consectetur id pariatur. Beatae voluptate rerum veritatis molestiae odio veniam consequatur quia. Quia et officiis quia voluptas recusandae et et.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 3, 2, 3),
+(7, 'Est accusamus labore aut quis ut. Earum iusto numquam ullam repellendus et consequatur eveniet. Aut qui qui et esse architecto.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 8, 8, 1),
+(8, 'Qui error dolore veniam harum. Vitae laboriosam voluptate ipsa architecto qui quia. Aliquam culpa sed ut voluptate facilis sed. Sunt non sunt mollitia non velit.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 9, 3, 2),
+(9, 'Dolores quia aut quasi ad. Ipsa facilis repudiandae ullam sit non. Natus ut possimus rerum.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 7, 6, 2),
+(10, 'Nihil vel doloremque suscipit labore. Accusantium aut minus itaque.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 10, 9, 2),
+(11, 'Swineulear Bastard', '2022-04-06 08:01:39', '2022-04-06 08:02:02', 13, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -145,13 +146,13 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2022_03_01_104322_create_gepeks_table', 1),
-(6, '2022_03_01_113409_create_allapots_table', 1),
-(7, '2022_03_01_114221_create_hibajelents_table', 1);
+(15, '2014_10_12_000000_create_users_table', 1),
+(16, '2014_10_12_100000_create_password_resets_table', 1),
+(17, '2019_08_19_000000_create_failed_jobs_table', 1),
+(18, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(19, '2022_03_01_104322_create_gepeks_table', 1),
+(20, '2022_03_01_113409_create_allapots_table', 1),
+(21, '2022_03_01_114221_create_hibajelents_table', 1);
 
 -- --------------------------------------------------------
 
@@ -195,7 +196,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Basic User',
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -206,18 +207,19 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Gilda Larson', 'skiles.jeramie@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'LIzgoycnok', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(2, 'Ms. Natalia Cronin', 'ashley.kerluke@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', '2jJtEmAO9f', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(3, 'Dr. Cedrick Schowalter', 'toy.elisha@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'JtyuMZNKJc', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(4, 'Miss Edythe Hegmann', 'kzieme@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'l19VolCOhW', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(5, 'Percival Bruen', 'gaetano20@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'iu5OanGBcC', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(6, 'Kamryn Ernser', 'kuhic.wilfredo@example.org', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'kJljF4ER1P', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(7, 'Adolph Gibson', 'thora.greenfelder@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'RvyLddDpf8', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(8, 'Miss Brooke Kreiger', 'cziemann@example.org', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'M8NCaigp1B', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(9, 'Heath Wisozk', 'melyssa.wiegand@example.com', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'rcUzBsVM5r', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(10, 'Susan Jast', 'kaela.connelly@example.net', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'C4oxaCoKap', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(11, 'Otha Swift DDS', 'daisha69@example.org', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'PWYmcBgizc', '2022-03-09 12:06:13', '2022-03-09 12:06:13'),
-(12, 'Lamar Stracke', 'ally39@example.net', '2022-03-09 12:06:13', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'l7FkN3SiMn', '2022-03-09 12:06:13', '2022-03-09 12:06:13');
+(1, 'Christiana Ratke', 'block.everardo@example.com', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'V4LmpFeAve', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(2, 'Bettye Jacobson', 'rwolff@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'FHH3H8bTvv', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(3, 'Miss Viola Kub DDS', 'alfreda66@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'fkO2SDGX3g', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(4, 'Newton O\'Hara', 'otto36@example.com', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'N9QvePRo4s', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(5, 'Ericka Collier', 'kareem26@example.org', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', '26HuZan7zd', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(6, 'Angela Jerde', 'cbraun@example.com', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'oKbCyQWYZ4', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(7, 'Mrs. Joana Bode', 'everett10@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'NxNJ4dEYfk', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(8, 'Harrison Maggio', 'irving.zboncak@example.com', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'x3vvmC0oCq', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(9, 'Antonette Huels', 'pasquale83@example.org', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'SbuAOpcHnV', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(10, 'Bret Nolan', 'sammie.predovic@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'wfv0FGeESf', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(11, 'Monroe Bernhard', 'izabella.kuphal@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'FzBLrSfCrV', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(12, 'Michelle Gusikowski', 'freddie.sporer@example.org', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', '1ZBmWe0aGh', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
+(13, 'Lakatos Winetu', 'swineularbastard@gmail.com', NULL, '$2y$10$CS/oFT8aEAfMymh9j2ON.uTpLKV3ZyZprsD5oJTjDPqNl39eSQrUm', 'Basic User', NULL, '2022-04-05 08:18:58', '2022-04-05 08:18:58');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -304,13 +306,13 @@ ALTER TABLE `gepeks`
 -- AUTO_INCREMENT a táblához `hibajelents`
 --
 ALTER TABLE `hibajelents`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT a táblához `personal_access_tokens`
@@ -322,7 +324,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Megkötések a kiírt táblákhoz

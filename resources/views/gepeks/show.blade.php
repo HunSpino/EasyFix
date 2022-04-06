@@ -9,6 +9,10 @@
 <p>Épület: {{ $gepek->epulet }}</p>
 <p>Emelet: {{ $gepek->emelet }}</p>
 <p>Terem: {{ $gepek->terem }}</p>
-<p>@include('delete-gepek-button', ['gepekId'=>$gepek->id])</p>
-<p><a href="{{ route('gepeks.edit', [$gepek->id]) }}"><button type="button">Szerkesztés</button></a></p>
+@auth
+    @if (auth()->user()->role === 'Admin')
+        <p>@include('delete-gepek-button', ['gepekId'=>$gepek->id])</p>
+        <p><a href="{{ route('gepeks.edit', [$gepek->id]) }}"><button type="button">Szerkesztés</button></a></p>
+    @endif
+@endauth
 </x-app-layout>
