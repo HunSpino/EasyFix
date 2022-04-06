@@ -1,7 +1,10 @@
-@extends('layout')
-
-@section('content')
-<p><a href="{{ route('home') }}"><button type="button">Vissza a főoldalra</button></a></p>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Hibajelentés Lista') }}
+        </h2>
+    </x-slot>
+<p><a href="{{ route('dashboard') }}"><button type="button">Vissza a főoldalra</button></a></p>
 <table>
     <tr>
         <th>Hibajelentő neve</th>
@@ -27,4 +30,4 @@
     </tr>
 </table>
 <p><a href="{{ route('hibajelents.create') }}"><button type="button">Új hibajelentés küldése</button></a></p>
-@endsection
+</x-app-layout>

@@ -1,8 +1,9 @@
-@extends('layout')
-
-@section('content')
-
-<h1>Terem edit</h1>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Szerkesztés') }}
+        </h2>
+    </x-slot>
     <form method='POST' action="{{ route('gepeks.update', $gepek->id) }}">
         @method('PATCH')
         @csrf
@@ -27,4 +28,4 @@
             <a href="{{ route('gepeks.show',[$gepek->id]) }}"><button type="button">Mégse</button></a>
         </div>
     </form>
-@endsection
+    </x-app-layout>

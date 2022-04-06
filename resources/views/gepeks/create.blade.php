@@ -1,9 +1,9 @@
-@extends('layout')
-
-@section('title','Új gép feljegyzése')
-
-@section('content')
-<h1>New PC</h1>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Új Gép feljegyzése') }}
+        </h2>
+    </x-slot>
     <form method='POST' action="{{ route('gepeks.store') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div>
@@ -39,4 +39,4 @@
             <a href="{{ route('gepeks.index') }}"><button type="button">Mégse</button></a>
         </div>
     </form>
-@endsection
+    </x-app-layout>

@@ -1,8 +1,9 @@
-@extends('layout')
-
-@section('title','Szerkesztés')
-
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Szerkesztés') }}
+        </h2>
+    </x-slot>
 <form method='POST' action="{{ route('hibajelents.update', $hibajelent->id) }}">
         @method('PATCH')
         @csrf
@@ -27,4 +28,4 @@
             <a href="{{ route('hibajelents.show',[$hibajelent->id]) }}"><button type="button">Mégse</button></a>
         </div>
 
-@endsection
+        </x-app-layout>

@@ -1,8 +1,9 @@
-@extends('layout')
-
-@section('title','Új hiba feljegyzése')
-
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Új hiba feljegyzése') }}
+        </h2>
+    </x-slot>
 <h1>New bug report</h1>
     <form method='POST' action="{{ route('hibajelents.store') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -32,4 +33,4 @@
             <a href="{{ route('hibajelents.index') }}"><button type="button">Mégse</button></a>
         </div>
     </form>
-@endsection
+    </x-app-layout>
