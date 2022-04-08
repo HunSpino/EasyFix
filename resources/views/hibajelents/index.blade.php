@@ -33,5 +33,9 @@
         @endforeach
     </tr>
 </table>
+@auth
+    @if (auth()->user()->role === 'Basic User')
 <p><a href="{{ route('hibajelents.create') }}"><button type="button">Új hibajelentés küldése</button></a></p>
+    @endif
+@endauth
 </x-app-layout>

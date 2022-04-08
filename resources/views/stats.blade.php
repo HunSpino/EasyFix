@@ -8,9 +8,13 @@
     <h1>Üdvözöllek a kezdőoldalon!</h1>
     <p>Ennyi személlyel dolgozik a cégünk: {{ $userCount }}</p>
     <p>Ennyi géppel dolgozik cégünk: {{ $gepekCount }}</p>
-    <a href="{{ route('login') }}"><button type="button">Log in</button></a>
+    <p>
+        <a href="{{ route('login') }}"><button type="button">Log in</button></a>
+    </p>
     @if (Route::has('register'))
+    <p>
         <a href="{{ route('register') }}"><button type="button">Register</button></a>
+    </p>
     @endif
     </x-auth-card>
 </x-guest-layout>

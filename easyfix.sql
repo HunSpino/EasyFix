@@ -219,7 +219,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (10, 'Bret Nolan', 'sammie.predovic@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'wfv0FGeESf', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
 (11, 'Monroe Bernhard', 'izabella.kuphal@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'FzBLrSfCrV', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
 (12, 'Michelle Gusikowski', 'freddie.sporer@example.org', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', '1ZBmWe0aGh', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
-(13, 'Lakatos Winetu', 'swineularbastard@gmail.com', NULL, '$2y$10$CS/oFT8aEAfMymh9j2ON.uTpLKV3ZyZprsD5oJTjDPqNl39eSQrUm', 'Basic User', NULL, '2022-04-05 08:18:58', '2022-04-05 08:18:58');
+(13, 'Lakatos Winetu', 'swineularbastard@gmail.com', NULL, '$2y$10$CS/oFT8aEAfMymh9j2ON.uTpLKV3ZyZprsD5oJTjDPqNl39eSQrUm', 'Admin', NULL, '2022-04-05 08:18:58', '2022-04-05 08:18:58');
 
 --
 -- Indexek a kiírt táblákhoz
