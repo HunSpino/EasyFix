@@ -127,7 +127,7 @@ INSERT INTO `hibajelents` (`id`, `hiba`, `created_at`, `updated_at`, `user_id`, 
 (8, 'Qui error dolore veniam harum. Vitae laboriosam voluptate ipsa architecto qui quia. Aliquam culpa sed ut voluptate facilis sed. Sunt non sunt mollitia non velit.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 9, 3, 2),
 (9, 'Dolores quia aut quasi ad. Ipsa facilis repudiandae ullam sit non. Natus ut possimus rerum.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 7, 6, 2),
 (10, 'Nihil vel doloremque suscipit labore. Accusantium aut minus itaque.', '2022-04-05 08:17:02', '2022-04-05 08:17:02', 10, 9, 2),
-(11, 'Swineulear Bastard', '2022-04-06 08:01:39', '2022-04-06 08:02:02', 13, 10, 1);
+(11, 'Nem akar működni a  böngésző', '2022-04-06 08:01:39', '2022-04-06 08:02:02', 13, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -219,7 +219,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (10, 'Bret Nolan', 'sammie.predovic@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Basic User', 'wfv0FGeESf', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
 (11, 'Monroe Bernhard', 'izabella.kuphal@example.net', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'FzBLrSfCrV', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
 (12, 'Michelle Gusikowski', 'freddie.sporer@example.org', '2022-04-05 08:17:02', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', '1ZBmWe0aGh', '2022-04-05 08:17:02', '2022-04-05 08:17:02'),
-(13, 'Lakatos Winetu', 'swineularbastard@gmail.com', NULL, '$2y$10$CS/oFT8aEAfMymh9j2ON.uTpLKV3ZyZprsD5oJTjDPqNl39eSQrUm', 'Admin', NULL, '2022-04-05 08:18:58', '2022-04-05 08:18:58');
+(13, 'Lakatos Winetu', 'adminexample@gmail.com', NULL, '$2y$10$CS/oFT8aEAfMymh9j2ON.uTpLKV3ZyZprsD5oJTjDPqNl39eSQrUm', 'Admin', NULL, '2022-04-05 08:18:58', '2022-04-05 08:18:58');
 
 --
 -- Indexek a kiírt táblákhoz
