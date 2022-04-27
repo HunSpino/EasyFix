@@ -1,6 +1,6 @@
-#EasyFix Backend
+# EasyFix Backend
 
-##A backend beállítása
+## A backend beállítása
 
 1. Sikeres klóbozás után a ".env.example" fájlból készíts egy másolatot ugyan arra a helyre, maly nevezd át ".env" re
 2. Készíts egy adatbázist "easyfix" névvel "utf8mb4_hungarian_ci" kódolással
