@@ -1,4 +1,8 @@
 # EasyFix Backend
+```
+Ez a vizsgaremek egy 2 személy közös munkálya volt. Sajnos az egyik közreműködő az évfolyam során megbukott, így a mákyusi vizsgán nem tudott részvenni
+```
+A vizsgaremek dokumentációja(mert vmiért a github nem szerette): https://drive.google.com/drive/folders/1om9AquDAzByXSRYA5DiEuk_vFaHr4Ta_?usp=sharing
 
 ## A backend beállítása
 
